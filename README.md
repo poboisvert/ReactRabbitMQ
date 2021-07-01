@@ -6,6 +6,18 @@
 
 - source env/bin/activate
 
+> cd admin && docker-compose up 
+
 - pip install -r requirements.txt
 
-cd admin && python manage.py runserver
+- cd admin && python manage.py runserver
+
+
+### Main
+
+#### Activate Shell
+
+> docker-compose exec backend sh
+
+##### Migration
+> python manager.py db --help
