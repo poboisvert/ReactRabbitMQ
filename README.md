@@ -1,17 +1,21 @@
 # Event-Driven Architecture (RabbitMQ)
 
-## Flow
-- Admin Service: backoffice API
-    - Event Produced:
-    - product_created
-    - product_updated
-    - product_deleted
+## Architecture
+
+![Diagram](Diagram.drawio)
+
+## Flow & Events
+- Admin Service (Product Service): Use by the front end to aggregate the product informations
+    - Events:
+        - product_created
+        - product_updated
+        - product_deleted
 
 ![preview](admin_service.png)
 
-- Main Service: front API
-    - Event Produced:
-    - product_liked
+- Main Service (Like Service): Use by the front end to aggregate likes and increment
+    - Event:
+        - product_liked
 
 ![preview](main_service.png)
 
