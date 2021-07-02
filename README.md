@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![Diagram](Diagram.drawio)
+![Diagram](Diagram.drawio.svg)
 
 ## Flow & Events
 - Admin Service (Product Service): Use by the front end to aggregate the product informations
