@@ -24,6 +24,7 @@ db = SQLAlchemy(app)
 class Product(db.Model):
     id: int
     title: str
+    description: str
     image: str
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=False)
@@ -40,7 +41,7 @@ class ProductUser(db.Model):
     UniqueConstraint('user_id', 'product_id', name='user_product_unique') # Must be Unique
 
 
-# Route
+# Route - All products
 @app.route('/api/products')
 def index():
     return jsonify(Product.query.all())

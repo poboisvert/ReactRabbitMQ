@@ -8,7 +8,7 @@ const Main = () => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch('http://localhost:8005/api/products');
+                const response = await fetch('http://localhost:8000/api/products');
 
                 const data = await response.json();
 
@@ -16,6 +16,8 @@ const Main = () => {
             }
         )();
     }, []);
+
+    console.log(products)
 
     const like = async (id: number) => {
         await fetch(`http://localhost:8005/api/products/${id}/like`, {
@@ -46,7 +48,7 @@ const Main = () => {
                                         <div className="card mb-4 shadow-sm">
                                             <img src={p.image} height="180"/>
                                             <div className="card-body">
-                                                <p className="card-text">{p.title}</p>
+                                                <p className="card-text">{p.title} | {p.description}</p>
                                                 <div className="d-flex justify-content-between align-items-center">
                                                     <div className="btn-group">
                                                         <button type="button"
@@ -56,7 +58,7 @@ const Main = () => {
                                                             Like
                                                         </button>
                                                     </div>
-                                                    <small className="text-muted">{p.likes} likes</small>
+                                                    <small> {p.likes} likes</small>
                                                 </div>
                                             </div>
                                         </div>
