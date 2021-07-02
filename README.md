@@ -1,4 +1,4 @@
-# RabbitMQREST
+# Event-Driven Architecture (RabbitMQ)
 
 
 ## ENV
