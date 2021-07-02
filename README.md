@@ -22,6 +22,9 @@
 - Frontend: Connect to both backend 8000 & 8005
 
 
+In a nut shell, the service likes will connect to the products and fetch all the information and increment the likes by +1
+
+
 ## ENV
 
 > python3 -m venv env

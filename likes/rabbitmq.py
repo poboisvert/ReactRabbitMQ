@@ -2,7 +2,7 @@
 # python consumer.py in cd admin && docker-compose exec backend sh  
 import pika, json
 
-from main import Product, db
+from likes import Product, db
 
 params = pika.URLParameters('amqps://xogussja:Rg2fhAoJyQkmQBkot2u9buS5r0f3xkIL@snake.rmq2.cloudamqp.com/xogussja')
 
