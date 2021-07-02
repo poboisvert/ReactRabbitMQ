@@ -1,4 +1,4 @@
-# RabbitMQREST
+# Event-Driven Architecture (RabbitMQ)
 
 
 ## ENV
@@ -21,3 +21,10 @@
 
 ##### Migration
 > python manager.py db --help
+
+
+### RabbitMQ test
+
+> cd admin && docker-compose exec backend sh
+
+> python consumer.py
