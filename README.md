@@ -5,6 +5,9 @@
 ![Diagram](Diagram.drawio.svg)
 
 ## Flow & Events
+
+Below is the breakdown of events under each service.
+
 - Products Service: Use by the front end to aggregate the product informations
     - Events:
         - product_created
@@ -22,10 +25,14 @@
 - Frontend: Connect to both backend 8000 & 8005
 
 
-In a nut shell, the service likes will connect to the products and fetch all the information and increment the likes by +1
+In a nut shell, the service likes will connect to the products and fetch all the information and increment the likes by +1.
+
+![preview](main_service_match.png)
+
+A limitation for these two service is it take a random user id since there is no session and aggregate it with the product id in the table product_user of the Flask application (likes service)
 
 
-## ENV
+## Setup Environment
 
 > python3 -m venv env
 
@@ -39,14 +46,20 @@ In a nut shell, the service likes will connect to the products and fetch all the
 
 > cd products && python manage.py runserver
 
+These commands will be used to run the service without Docker.
 
 ### Main
 
 #### Activate Shell
 
+> cd likes OR cd products
+
 > docker-compose exec backend sh
 
+backend is the service written in the .yml
+
 ##### Migration
+
 > python manager.py db --help
 
 

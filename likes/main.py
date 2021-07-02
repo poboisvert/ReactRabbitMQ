@@ -31,6 +31,7 @@ class Product(db.Model):
     title = db.Column(db.String(200))
     description = db.Column(db.String(200))
     image = db.Column(db.String(200))
+    # Create the table product
 
 @dataclass
 class ProductUser(db.Model):
@@ -39,6 +40,7 @@ class ProductUser(db.Model):
     product_id = db.Column(db.Integer)
 
     UniqueConstraint('user_id', 'product_id', name='user_product_unique') # Must be Unique
+    # Create the table product_user
 
 
 # Route - All products
@@ -46,20 +48,19 @@ class ProductUser(db.Model):
 def index():
     return jsonify(Product.query.all())
 
-# Route
+# Route / - Test if server is ON
 @app.route('/')
 def home():
     return 'Server ON'
 
-
-
+# Route / - Test if server is ON
 @app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
-    req = requests.get('http://host.docker.internal:8000/api/user')
+    req = requests.get('http://host.docker.internal:8000/api/user') # Return a random user
     json = req.json()
 
     try:
-        productUser = ProductUser(user_id=json['id'], product_id=id)
+        productUser = ProductUser(user_id=json['id'], product_id=id) # Match the id user and id product
         db.session.add(productUser)
         db.session.commit()
 
