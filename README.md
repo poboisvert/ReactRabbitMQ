@@ -5,7 +5,7 @@
 ![Diagram](Diagram.drawio.svg)
 
 ## Flow & Events
-- Admin Service (Product Service): Use by the front end to aggregate the product informations
+- Products Service: Use by the front end to aggregate the product informations
     - Events:
         - product_created
         - product_updated
@@ -13,7 +13,7 @@
 
 ![preview](admin_service.png)
 
-- Main Service (Like Service): Use by the front end to aggregate likes and increment
+- Likes Service: Use by the front end to aggregate likes and increment
     - Event:
         - product_liked
 
@@ -23,15 +23,18 @@
 
 
 ## ENV
+
 > python3 -m venv env
 
 > source env/bin/activate
 
-> cd admin && docker-compose up 
+> cd products && docker-compose up 
+
+> cd products && docker-compose up --build
 
 > pip install -r requirements.txt
 
-> cd admin && python manage.py runserver
+> cd products && python manage.py runserver
 
 
 ### Main
@@ -46,7 +49,9 @@
 
 ### RabbitMQ test
 
-> cd admin && docker-compose exec backend sh
+> cd likes && docker-compose exec likes_backend sh
+
+> cd products && docker-compose exec products_backend sh
 
 > python consumer.py
 
