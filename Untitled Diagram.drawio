@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2021-07-02T16:09:31.481Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="PL3TY8nmyINEYE-1XAeP" version="14.8.3" type="github">
+  <diagram id="JSVMKP6C5SB_8DGq8801" name="Page-1">
+    <mxGraphModel dx="1432" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-4" value="client" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="30" y="280" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-5" value="React JS App" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="FnGTnJTq92sfqq2Cz8zz-4">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-8" value="Product" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="199" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-9" value="Django -&gt; MySQL" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="FnGTnJTq92sfqq2Cz8zz-8">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-10" value="Likes" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-11" value="Flask -&gt; MySQL" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="FnGTnJTq92sfqq2Cz8zz-10">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-12" value="Common" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="100" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-13" value="RabbitMQ&lt;br&gt;Streaming Server" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="640" y="120" width="100" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-14" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FnGTnJTq92sfqq2Cz8zz-8" target="FnGTnJTq92sfqq2Cz8zz-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-15" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.154;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FnGTnJTq92sfqq2Cz8zz-11" target="FnGTnJTq92sfqq2Cz8zz-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-16" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="FnGTnJTq92sfqq2Cz8zz-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="225" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FnGTnJTq92sfqq2Cz8zz-18" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="326" as="sourcePoint" />
+            <mxPoint x="322" y="326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
