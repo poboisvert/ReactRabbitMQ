@@ -8,6 +8,7 @@ from rest_framework.response import Response
 
 from .models import Product, User
 from .serializers import ProductSerializer
+from .producer import publish
 
 from rest_framework.views import APIView
 
@@ -16,6 +17,7 @@ class ProductViewSet(viewsets.ViewSet):
     def list(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
+        # Rabbit MQ
         return Response(serializer.data)
 
     def create(self, request):
@@ -24,6 +26,8 @@ class ProductViewSet(viewsets.ViewSet):
 
         # DB action
         serializer.save()
+        # RabbitMQ
+        publish('product_created', serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None): # pk = primary key
@@ -36,6 +40,8 @@ class ProductViewSet(viewsets.ViewSet):
 
          # DB action
         product.delete()
+        # RabbitMQ
+        publish('product_deleted', pk)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class UserCallView(APIView):
