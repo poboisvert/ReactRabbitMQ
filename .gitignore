@@ -9,6 +9,8 @@ env
 .DS_Store
 .dbdata
 
+node_modules
+
 # Distribution / packaging
 .Python
 build/

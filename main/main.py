@@ -45,6 +45,12 @@ class ProductUser(db.Model):
 def index():
     return jsonify(Product.query.all())
 
+# Route
+@app.route('/')
+def home():
+    return 'Server ON'
+
+
 
 @app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
