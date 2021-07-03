@@ -4,6 +4,16 @@
 
 ![Diagram](Diagram.drawio.svg)
 
+The principle of a microservice is it has to be independent from other services. In a nutshell:
+
+- Highly maintainable and testable. Either with Postman or Jest/Pytest
+- Loosely coupled
+- Independently deployable (Has it own database that contain all the information) 
+- Organized around business capabilities
+- Owned by a small team
+
+Previously companies were using "Monolithic architecture" and microservice started to be more popular in 2005.
+
 ## Flow & Events
 
 Below is the breakdown of events under each service.
