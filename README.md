@@ -12,7 +12,7 @@ The principle of a microservice is it has to be independent from other services.
 - Organized around business capabilities
 - Owned by a small team
 
-Previously companies were using "Monolithic architecture" and microservice started to be more popular in 2005.
+Previously companies were using "Monolithic architecture" and microservices started to be popular in the early 2000s.
 
 ## Flow & Events
 
