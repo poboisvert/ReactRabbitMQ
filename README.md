@@ -82,6 +82,17 @@ backend is the service written in the .yml
 > python consumer.py
 
 ### Referencies
+
+#### Service
 - https://www-freecodecamp-org.cdn.ampproject.org/v/s/www.freecodecamp.org/news/python-microservices-course/amp/?amp_js_v=a6&amp_gsa=1&usqp=mq331AQFKAGwASA%3D#csi=0&referrer=https%3A%2F%2Fwww.google.com&amp_tf=Fonte%3A%20%251%24s&ampshare=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fpython-microservices-course%2F
 
 - https://youtu.be/0iB5IPoTDts
+
+
+#### IBM Introduction
+
+- https://www.youtube.com/watch?v=7rkeORD4jSw
+
+#### AWS Support 
+
+https://aws.amazon.com/about-aws/whats-new/2020/11/announcing-amazon-mq-rabbitmq/
