@@ -81,6 +81,10 @@ backend is the service written in the .yml
 
 > python consumer.py
 
+### Jenkins
+
+- https://towardsdatascience.com/jenkins-for-ci-is-dead-why-do-people-hate-it-and-whats-the-alternative-8d8b6b88fdba
+
 ### Referencies
 
 #### Service
